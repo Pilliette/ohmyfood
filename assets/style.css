@@ -1,0 +1,14 @@
+/********** GENERAL **********/
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/********** VARIABLES **********/
+
+:root {
+    --primary-color: #9356dc;
+    --secondary-color: #ff79da;
+    --tertiary-color: #99e2d0;
+    --font-title: 'Shrikhand', serif;
+}
