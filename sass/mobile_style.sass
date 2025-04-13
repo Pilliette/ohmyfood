@@ -55,8 +55,7 @@ h2
   color: black
 
 .explorer
-  //background-color: #f6f6f6
-  background-color: red
+  background-color: #f6f6f6
   height: calc(400px - 113px)
   display: flex
   flex-direction: column
@@ -78,7 +77,7 @@ h2
     margin-top: calc(293px - 152px - 68px - 46px)
     width: 218px
     height: 50px
-    border: 0
+    border: none
     border-radius: 25px
     background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color))
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
@@ -94,23 +93,91 @@ h2
 
 /********** SECTION FONCTIONNEMENT **********/
 
+.section__title
+  padding-left: 20px
+  margin: 0
+
 .fonctionnement
   height: 440px
   //background-color: white
   background-color: green
   &__title
-    padding-left: 20px
-    padding-top: calc( 448px - 400px)
+    padding-top: calc(448px - 400px)
     padding-bottom: 26px
-    margin: 0
   ol
     display: flex
     flex-direction: column
     gap: 24.93px
-    line-height: 72.38px
     margin: 0
+    list-style: none
+    counter-reset: li
+    padding-left: calc(((375px - 335px) / 2) + 12px)
   li
     width: 335px
+    display: flex
+    flex-direction: row
+    align-items: center
+    counter-increment: li
+    position: relative
+    &::before
+      content: counter(li)
+      color: white
+      font-size: 14.18px
+      font-weight: 500
+      background-color: var(--primary-color)
+      width: 24px
+      height: 24px
+      border: none
+      border-radius: 50%
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+      left: -12px
   &__button
     width: 322.49px
-    height: 100%
+    height: 72.38px
+    border: none
+    border-radius: 20px
+    background-color: #f6f6f6
+    display: flex
+    align-items: center
+    padding-left: 33.47px
+    gap: calc(106px - 32.51px - 33.47px - 13.02px)
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15)
+    font-size: 16px
+    font-weight: 500
+    color: black
+    i
+      color: #7E7E7E
+    .fa-mobile-screen-button
+      font-size: 19.9px
+    .fa-list-ul
+      font-size: 15.92px
+    .fa-store
+      color: var(--primary-color)
+      font-size: 17.91px
+
+/********** FIN SECTION FONCTIONNEMENT **********/
+
+/********** SECTION RESTAURANT **********/
+
+.restaurants
+  height: calc(2066px - 440px - 400px)
+  //background-color: #f6f6f6
+  background-color: red
+  &__title
+    padding-top: calc(894px - 440px - 400px)
+    padding-bottom: calc(942px - 894px - 24px)
+  .restaurants__allcards
+    width: 340px
+    gap: 18px
+    .restaurants__singlecard
+      height: 251px
+      border: none
+      border-radius: 15px
+      display: flex
+      flex-direction: column
+      .restaurants__img
+        width: 100%
+        height: calc(251px - 12px - 24px - 5px - 20px - 16px)
