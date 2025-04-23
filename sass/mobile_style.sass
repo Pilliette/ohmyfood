@@ -1,41 +1,45 @@
-/********** HEADER **********/
+/********** GENERAL **********/
 
-body
-  width: 375px
+.explorer__title,
+.fonctionnement__title,
+.restaurants__title
+  font-size: 24px
+  font-weight: 700
+  color: black
+
+.section__title
+  padding-left: 20px
   margin: 0
 
+.restaurants__link,
+.footer__link
+  text-decoration: none
+
+/********** FIN GENERAL **********/
+
+/********** HEADER **********/
+
 header
-  h1
-    font-family: Shrikhand
-    font-size: 30px
-    font-weight: 400
-    color: #101010
-    margin: 0
   i
     font-size: 16px
     color: #353535
+
   input
     font-weight: 500
     font-size: 16px
     color: #353535
     background-color: transparent
-    border: none    
+    border: none
+
+    &#city
+      width: 109px
+
     &::placeholder
       font-size: 16px
       color: #353535
-    &#city
-      width: 109px
+
   .header
-    &__form
-      display: flex
-      justify-content: center
-      align-items: center
-      gap: 17px
-      height: 50px
-      width: 100%
-      background-color: #eaeaea
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-    &__title
+    &__maintitle
       height: 63px
       width: 100%
       background-color: white
@@ -45,14 +49,26 @@ header
       position: relative
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
 
+    &__title
+      font-family: Shrikhand
+      font-size: 30px
+      font-weight: 400
+      color: #101010
+      margin: 0
+
+    &__form
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 17px
+      height: 50px
+      width: 100%
+      background-color: #eaeaea
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
 /********** FIN HEADER **********/
 
 /********** SECTION EXPLORER **********/
-
-h2
-  font-size: 24px
-  font-weight: 700
-  color: black
 
 .explorer
   background-color: #f6f6f6
@@ -60,12 +76,14 @@ h2
   display: flex
   flex-direction: column
   align-items: center
+
   &__title
     text-align: center
     width: 275px
     height: 68px
     margin-bottom: 0
     margin-top: calc(152px - 113px)
+
   &__p
     font-size: 18px
     font-weight: 300
@@ -73,6 +91,7 @@ h2
     width: 315px
     height: 46px
     margin: 0
+
   &__button
     margin-top: calc(293px - 152px - 68px - 46px)
     width: 218px
@@ -85,6 +104,7 @@ h2
     font-size: 16px
     font-weight: 500
     transition: filter 0.3s ease
+
     &:hover
       filter: brightness(1.15)
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35)
@@ -93,17 +113,14 @@ h2
 
 /********** SECTION FONCTIONNEMENT **********/
 
-.section__title
-  padding-left: 20px
-  margin: 0
-
 .fonctionnement
   height: 440px
-  //background-color: white
-  background-color: green
+  background-color: white
+
   &__title
     padding-top: calc(448px - 400px)
     padding-bottom: 26px
+
   ol
     display: flex
     flex-direction: column
@@ -112,6 +129,7 @@ h2
     list-style: none
     counter-reset: li
     padding-left: calc(((375px - 335px) / 2) + 12px)
+
   li
     width: 335px
     display: flex
@@ -119,6 +137,7 @@ h2
     align-items: center
     counter-increment: li
     position: relative
+
     &::before
       content: counter(li)
       color: white
@@ -134,6 +153,7 @@ h2
       justify-content: center
       align-items: center
       left: -12px
+
   &__button
     width: 322.49px
     height: 72.38px
@@ -148,36 +168,148 @@ h2
     font-size: 16px
     font-weight: 500
     color: black
+
     i
       color: #7E7E7E
+
     .fa-mobile-screen-button
       font-size: 19.9px
+
     .fa-list-ul
       font-size: 15.92px
+
     .fa-store
       color: var(--primary-color)
       font-size: 17.91px
 
 /********** FIN SECTION FONCTIONNEMENT **********/
 
-/********** SECTION RESTAURANT **********/
+/********** SECTION RESTAURANTS **********/
 
 .restaurants
   height: calc(2066px - 440px - 400px)
-  //background-color: #f6f6f6
-  background-color: red
+  background-color: #f6f6f6
+  display: flex
+  flex-direction: column
+  align-items: center
+
   &__title
     padding-top: calc(894px - 440px - 400px)
     padding-bottom: calc(942px - 894px - 24px)
-  .restaurants__allcards
+    align-self: stretch
+
+  &__allcards
     width: 340px
+    display: flex
+    flex-direction: column
     gap: 18px
-    .restaurants__singlecard
-      height: 251px
-      border: none
-      border-radius: 15px
+
+  &__singlecard
+    height: 251px
+    background-color: white
+    border: none
+    border-radius: 15px
+    display: flex
+    flex-direction: column
+    
+  &__img
+    width: 100%
+    height: calc(251px - 12px - 24px - 5px - 20px - 16px)
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px
+    object-fit: cover
+    object-position: bottom
+
+    &--position
+      object-position: 39% 61%
+
+  &__details
+    height: 77px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__identity
+    padding-top: 16px
+    padding-bottom: 12px
+    padding-left: 13px
+    gap: 5px
+
+  &__name
+    height: 20px
+    font-size: 18px
+    font-weight: 700
+    color: black
+    margin: 0
+
+  &__city
+    height: 24px
+    font-size: 17px
+    font-weight: 300
+    color: black
+    margin: 0
+
+  &__favorite
+    padding-top: calc(77px - 33px - 21px)
+    padding-right: 25px
+    padding-bottom: 33px
+
+/********** FIN SECTION RESTAURANTS **********/
+
+/********** FOOTER **********/
+
+footer
+  height: 186px
+  background-color: #353535
+  padding: 22px 25px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+  .footer
+    &__title
+      font-family: Shrikhand
+      height: 27px
+      font-size: 18px
+      font-weight: 400
+      color: white
+      margin: 0
+    
+    &__proposal
+      gap: 11px
+    
+    &__partner
+      gap: 10.08px
+
+    &__bold
+      font-weight: 500
+
+    &__light
+      font-weight: 400
+
+  ul
+    list-style: none
+    display: grid
+    gap: 7px
+    margin: 0
+    padding: 0
+
+    li
+      height: 19px
       display: flex
-      flex-direction: column
-      .restaurants__img
-        width: 100%
-        height: calc(251px - 12px - 24px - 5px - 20px - 16px)
+
+      i, a
+        color: white
+
+      .fa-utensils, .fa-handshake-angle
+        font-size: 13px
+      
+      .fa-utensils
+        width: 11px
+
+      .fa-handshake-angle
+        width: 11.92px
+
+      a
+        font-size: 16px

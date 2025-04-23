@@ -1,16 +1,24 @@
-/********** HEADER **********/
-body {
-  width: 375px;
+/********** GENERAL **********/
+.explorer__title,
+.fonctionnement__title,
+.restaurants__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+
+.section__title {
+  padding-left: 20px;
   margin: 0;
 }
 
-header h1 {
-  font-family: Shrikhand;
-  font-size: 30px;
-  font-weight: 400;
-  color: #101010;
-  margin: 0;
+.restaurants__link,
+.footer__link {
+  text-decoration: none;
 }
+
+/********** FIN GENERAL **********/
+/********** HEADER **********/
 header i {
   font-size: 16px;
   color: #353535;
@@ -22,12 +30,29 @@ header input {
   background-color: transparent;
   border: none;
 }
+header input#city {
+  width: 109px;
+}
 header input::placeholder {
   font-size: 16px;
   color: #353535;
 }
-header input#city {
-  width: 109px;
+header .header__maintitle {
+  height: 63px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header .header__title {
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: 400;
+  color: #101010;
+  margin: 0;
 }
 header .header__form {
   display: flex;
@@ -39,25 +64,9 @@ header .header__form {
   background-color: #eaeaea;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-header .header__title {
-  height: 63px;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
 
 /********** FIN HEADER **********/
 /********** SECTION EXPLORER **********/
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: black;
-}
-
 .explorer {
   background-color: #f6f6f6;
   height: 287px;
@@ -100,14 +109,9 @@ h2 {
 
 /********** FIN SECTION EXPLORER **********/
 /********** SECTION FONCTIONNEMENT **********/
-.section__title {
-  padding-left: 20px;
-  margin: 0;
-}
-
 .fonctionnement {
   height: 440px;
-  background-color: green;
+  background-color: white;
 }
 .fonctionnement__title {
   padding-top: 48px;
@@ -176,32 +180,132 @@ h2 {
 }
 
 /********** FIN SECTION FONCTIONNEMENT **********/
-/********** SECTION RESTAURANT **********/
+/********** SECTION RESTAURANTS **********/
 .restaurants {
   height: 1226px;
-  background-color: red;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .restaurants__title {
   padding-top: 54px;
   padding-bottom: 24px;
+  align-self: stretch;
 }
-.restaurants .restaurants__allcards {
+.restaurants__allcards {
   width: 340px;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
-.restaurants .restaurants__allcards .restaurants__singlecard {
+.restaurants__singlecard {
   height: 251px;
+  background-color: white;
   border: none;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
-.restaurants .restaurants__allcards .restaurants__singlecard .restaurants__img {
+.restaurants__img {
   width: 100%;
   height: 174px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  object-position: bottom;
 }
-.restaurants .restaurants__allcards .restaurants__singlecard .restaurants__new {
-  z-index: 1;
+.restaurants__img--position {
+  object-position: 39% 61%;
+}
+.restaurants__details {
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants__identity {
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+  gap: 5px;
+}
+.restaurants__name {
+  height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+.restaurants__city {
+  height: 24px;
+  font-size: 17px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
+.restaurants__favorite {
+  padding-top: 23px;
+  padding-right: 25px;
+  padding-bottom: 33px;
+}
+
+/********** FIN SECTION RESTAURANTS **********/
+/********** FOOTER **********/
+footer {
+  height: 186px;
+  background-color: #353535;
+  padding: 22px 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer__title {
+  font-family: Shrikhand;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+footer .footer__proposal {
+  gap: 11px;
+}
+footer .footer__partner {
+  gap: 10.08px;
+}
+footer .footer__bold {
+  font-weight: 500;
+}
+footer .footer__light {
+  font-weight: 400;
+}
+footer ul {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  height: 19px;
+  display: flex;
+}
+footer ul li i, footer ul li a {
+  color: white;
+}
+footer ul li .fa-utensils, footer ul li .fa-handshake-angle {
+  font-size: 13px;
+}
+footer ul li .fa-utensils {
+  width: 11px;
+}
+footer ul li .fa-handshake-angle {
+  width: 11.92px;
+}
+footer ul li a {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=mobile_style.css.map */
