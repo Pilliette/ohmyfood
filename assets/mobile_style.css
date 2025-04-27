@@ -206,6 +206,10 @@ header .header__form {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurants__link--visited:visited .restaurants__tag {
+  display: none;
 }
 .restaurants__img {
   width: 100%;
@@ -214,9 +218,35 @@ header .header__form {
   border-top-right-radius: 15px;
   object-fit: cover;
   object-position: bottom;
+  position: relative;
 }
 .restaurants__img--position {
   object-position: 39% 61%;
+}
+.restaurants__tag {
+  width: 80px;
+  height: 29px;
+  background-color: var(--tertiary-color);
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  margin-top: -161px;
+  right: 28px;
+}
+.restaurants__tag p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  text-align: center;
+  margin: 0;
+  padding-top: 6.1px;
+}
+.restaurants .restaurants__allcards:has(.restaurants__link--1:active) .restaurants__tag--1,
+.restaurants .restaurants__allcards:has(.restaurants__link--2:active) .restaurants__tag--2,
+.restaurants .restaurants__allcards:has(.restaurants__link--3:active) .restaurants__tag--3,
+.restaurants .restaurants__allcards:has(.restaurants__link--4:active) .restaurants__tag--4 {
+  display: none;
 }
 .restaurants__details {
   height: 77px;
@@ -245,11 +275,49 @@ header .header__form {
   margin: 0;
 }
 .restaurants__favorite {
+  position: relative;
+  width: 22px;
+  height: 21px;
   padding-top: 23px;
   padding-right: 25px;
   padding-bottom: 33px;
+  transition: 0.3s;
+}
+.restaurants__checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.restaurants__checkbox:checked ~ .restaurants__svg .restaurants__svg--empty {
+  display: none;
+}
+.restaurants__checkbox:checked ~ .restaurants__svg .restaurants__svg--full {
+  display: block;
+}
+.restaurants__svg {
+  height: 100%;
+}
+.restaurants__svg--full {
+  animation: svg__keyframes--full 1s;
+  display: none;
+}
+.restaurants__svg--full #restaurants__svg--gradient {
+  rotate: 90deg;
 }
 
+@keyframes svg__keyframes--full {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
 /********** FIN SECTION RESTAURANTS **********/
 /********** FOOTER **********/
 footer {
