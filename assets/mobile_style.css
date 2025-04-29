@@ -1,0 +1,381 @@
+/********** GENERAL **********/
+.explorer__title,
+.fonctionnement__title,
+.restaurants__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+
+.section__title {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.restaurants__link,
+.footer__link {
+  text-decoration: none;
+}
+
+/********** FIN GENERAL **********/
+/********** HEADER **********/
+header i {
+  font-size: 16px;
+  color: #353535;
+}
+header input {
+  font-weight: 500;
+  font-size: 16px;
+  color: #353535;
+  background-color: transparent;
+  border: none;
+}
+header input#city {
+  width: 109px;
+}
+header input::placeholder {
+  font-size: 16px;
+  color: #353535;
+}
+header .header__maintitle {
+  height: 63px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+header .header__title {
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: 400;
+  color: #101010;
+  margin: 0;
+}
+header .header__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/********** FIN HEADER **********/
+/********** SECTION EXPLORER **********/
+.explorer {
+  background-color: #f6f6f6;
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explorer__title {
+  text-align: center;
+  width: 275px;
+  height: 68px;
+  margin-bottom: 0;
+  margin-top: 39px;
+}
+.explorer__p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  width: 315px;
+  height: 46px;
+  margin: 0;
+}
+.explorer__button {
+  margin-top: 27px;
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: filter 0.3s ease;
+}
+.explorer__button:hover {
+  filter: brightness(1.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+/********** FIN SECTION EXPLORER **********/
+/********** SECTION FONCTIONNEMENT **********/
+.fonctionnement {
+  height: 440px;
+  background-color: white;
+}
+.fonctionnement__title {
+  padding-top: 48px;
+  padding-bottom: 26px;
+}
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 24.93px;
+  margin: 0;
+  list-style: none;
+  counter-reset: li;
+  padding-left: 32px;
+}
+.fonctionnement li {
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  counter-increment: li;
+  position: relative;
+}
+.fonctionnement li::before {
+  content: counter(li);
+  color: white;
+  font-size: 14.18px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -12px;
+}
+.fonctionnement__button {
+  width: 322.49px;
+  height: 72.38px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  padding-left: 33.47px;
+  gap: 27px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+.fonctionnement__button i {
+  color: #7E7E7E;
+}
+.fonctionnement__button .fa-mobile-screen-button {
+  font-size: 19.9px;
+}
+.fonctionnement__button .fa-list-ul {
+  font-size: 15.92px;
+}
+.fonctionnement__button .fa-store {
+  color: var(--primary-color);
+  font-size: 17.91px;
+}
+
+/********** FIN SECTION FONCTIONNEMENT **********/
+/********** SECTION RESTAURANTS **********/
+.restaurants {
+  height: 1226px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurants__title {
+  padding-top: 54px;
+  padding-bottom: 24px;
+  align-self: stretch;
+}
+.restaurants__allcards {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants__singlecard {
+  height: 251px;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurants__link--visited:visited .restaurants__tag {
+  display: none;
+}
+.restaurants__img {
+  width: 100%;
+  height: 174px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  object-position: bottom;
+  position: relative;
+}
+.restaurants__img--position {
+  object-position: 39% 61%;
+}
+.restaurants__tag {
+  width: 80px;
+  height: 29px;
+  background-color: var(--tertiary-color);
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  margin-top: -161px;
+  right: 28px;
+}
+.restaurants__tag p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  text-align: center;
+  margin: 0;
+  padding-top: 6.1px;
+}
+.restaurants .restaurants__allcards:has(.restaurants__link--1:active) .restaurants__tag--1,
+.restaurants .restaurants__allcards:has(.restaurants__link--2:active) .restaurants__tag--2,
+.restaurants .restaurants__allcards:has(.restaurants__link--3:active) .restaurants__tag--3,
+.restaurants .restaurants__allcards:has(.restaurants__link--4:active) .restaurants__tag--4 {
+  display: none;
+}
+.restaurants__details {
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants__identity {
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+  gap: 5px;
+}
+.restaurants__name {
+  height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+.restaurants__city {
+  height: 24px;
+  font-size: 17px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
+.restaurants__favorite {
+  position: relative;
+  width: 22px;
+  height: 21px;
+  padding-top: 23px;
+  padding-right: 25px;
+  padding-bottom: 33px;
+  transition: 0.3s;
+}
+.restaurants__checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.restaurants__checkbox:checked ~ .restaurants__svg .restaurants__svg--empty {
+  display: none;
+}
+.restaurants__checkbox:checked ~ .restaurants__svg .restaurants__svg--full {
+  display: block;
+}
+.restaurants__svg {
+  height: 100%;
+}
+.restaurants__svg--full {
+  animation: svg__keyframes--full 1s;
+  display: none;
+}
+.restaurants__svg--full #restaurants__svg--gradient {
+  rotate: 90deg;
+}
+
+@keyframes svg__keyframes--full {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+/********** FIN SECTION RESTAURANTS **********/
+/********** FOOTER **********/
+footer {
+  height: 186px;
+  background-color: #353535;
+  padding: 22px 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer__title {
+  font-family: Shrikhand;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+footer .footer__proposal {
+  gap: 11px;
+}
+footer .footer__partner {
+  gap: 10.08px;
+}
+footer .footer__bold {
+  font-weight: 500;
+}
+footer .footer__light {
+  font-weight: 400;
+}
+footer ul {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  height: 19px;
+  display: flex;
+}
+footer ul li i, footer ul li a {
+  color: white;
+}
+footer ul li .fa-utensils, footer ul li .fa-handshake-angle {
+  font-size: 13px;
+}
+footer ul li .fa-utensils {
+  width: 11px;
+}
+footer ul li .fa-handshake-angle {
+  width: 11.92px;
+}
+footer ul li a {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=mobile_style.css.map */

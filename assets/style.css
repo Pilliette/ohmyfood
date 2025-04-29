@@ -4,6 +4,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    width: 375px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /********** VARIABLES **********/
 
 :root {
