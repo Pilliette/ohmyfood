@@ -1,0 +1,251 @@
+/********** HEADER **********/
+header {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  height: 63px;
+}
+header a {
+  margin-left: 23px;
+  z-index: 2;
+}
+header i {
+  font-size: 16px;
+  color: #353535;
+}
+header .header__maintitle {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .header__title {
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: 400;
+  color: #101010;
+  margin: 0;
+}
+
+/********** FIN HEADER **********/
+/********** SECTION RESTAURANT **********/
+.restaurant {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant__photo {
+  height: 275px;
+  object-fit: cover;
+}
+.restaurant__menu {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: #F6F6F6;
+  margin-top: -55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.restaurant__profile {
+  display: flex;
+  justify-content: space-between;
+  width: 341px;
+  height: 29px;
+  margin-top: 32px;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+.restaurant__name {
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 400;
+  color: #101010;
+  margin: 0;
+}
+.restaurant__favorite {
+  position: relative;
+  width: 22px;
+  height: 21px;
+  padding-top: 8px;
+  padding-right: 24px;
+  transition: 0.3s;
+}
+.restaurant__checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.restaurant__checkbox:checked ~ .restaurant__svg .restaurant__svg--empty {
+  display: none;
+}
+.restaurant__checkbox:checked ~ .restaurant__svg .restaurant__svg--full {
+  display: block;
+}
+.restaurant__svg {
+  height: 100%;
+}
+.restaurant__svg--full {
+  animation: svg__keyframes--full 1s;
+  display: none;
+}
+.restaurant__svg--full #restaurant__svg--gradient {
+  rotate: 90deg;
+}
+.restaurant__menutitle {
+  width: 275px;
+  height: 27px;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
+.restaurant__menutitle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--tertiary-color);
+  position: absolute;
+  top: 24px;
+}
+.restaurant__card {
+  height: 69px;
+  border-radius: 15.04px;
+  background: white;
+  box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+.restaurant__card:active {
+  box-shadow: none;
+}
+.restaurant__dish {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+.restaurant__dishdetail {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__dishdetail--light, .restaurant__dishdetail--bold {
+  font-size: 15.04px;
+  color: black;
+  margin: 0;
+}
+.restaurant__dishdetail--light {
+  font-weight: 300;
+}
+.restaurant__dishdetail--bold {
+  font-weight: 700;
+}
+.restaurant__setmenu {
+  width: 349px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+.restaurant__button {
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: filter 0.3s ease;
+  margin-bottom: 40px;
+}
+.restaurant__button:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes svg__keyframes--full {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+/********** FIN SECTION RESTAURANT **********/
+/********** FOOTER **********/
+footer {
+  height: 186px;
+  background-color: #353535;
+  padding: 22px 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer__title {
+  font-family: Shrikhand;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+footer .footer__proposal {
+  gap: 11px;
+}
+footer .footer__partner {
+  gap: 10.08px;
+}
+footer .footer__bold {
+  font-weight: 500;
+}
+footer .footer__light {
+  font-weight: 400;
+}
+footer ul {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  height: 19px;
+  display: flex;
+}
+footer ul li i, footer ul li a {
+  color: white;
+}
+footer ul li .fa-utensils, footer ul li .fa-handshake-angle {
+  font-size: 13px;
+}
+footer ul li .fa-utensils {
+  width: 11px;
+}
+footer ul li .fa-handshake-angle {
+  width: 11.92px;
+}
+footer ul li a {
+  font-size: 16px;
+}
+
+/********** FIN FOOTER **********/
+
+/*# sourceMappingURL=mobile_menupage_style.css.map */

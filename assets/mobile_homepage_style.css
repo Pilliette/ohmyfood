@@ -234,7 +234,7 @@ header .header__form {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: absolute;
   margin-top: -161px;
-  right: 28px;
+  left: 265px;
 }
 .restaurants__tag p {
   font-size: 14px;
@@ -378,4 +378,6 @@ footer ul li a {
   font-size: 16px;
 }
 
-/*# sourceMappingURL=mobile_style.css.map */
+/********** FIN FOOTER **********/
+
+/*# sourceMappingURL=mobile_homepage_style.css.map */
