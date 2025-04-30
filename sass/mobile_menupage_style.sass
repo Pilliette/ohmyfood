@@ -1,0 +1,253 @@
+/********** HEADER **********/
+
+header
+  display: flex
+  align-items: center
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15)
+  position: relative
+  height: 63px
+
+  a
+    margin-left: calc(17px + 6px)
+    z-index: 2
+
+  i
+    font-size: 16px
+    color: #353535
+
+  .header
+    &__maintitle
+      height: 100%
+      background-color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+
+    &__title
+      font-family: Shrikhand
+      font-size: 30px
+      font-weight: 400
+      color: #101010
+      margin: 0
+
+/********** FIN HEADER **********/
+
+/********** SECTION RESTAURANT **********/
+
+.restaurant
+  display: flex
+  flex-direction: column
+
+  &__photo
+    height: 275px
+    object-fit: cover
+  
+  &__menu
+    border-top-left-radius: 40px
+    border-top-right-radius: 40px
+    background: #F6F6F6
+    margin-top: -55px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 40px
+  
+  &__profile
+    display: flex
+    justify-content: space-between
+    width: 341px
+    height: 29px
+    margin-top: 32px
+    margin-left: 17px
+    margin-right: 17px
+
+  &__name
+    font-family: var(--font-title)
+    font-size: 28px
+    font-weight: 400
+    color: #101010
+    margin: 0
+  
+  &__favorite
+    position: relative
+    width: 22px
+    height: 21px
+    padding-top: calc(29px - 21px)
+    padding-right: calc(41px - 17px)
+    transition: 0.3s
+
+  &__checkbox
+    position: absolute
+    opacity: 0
+    z-index: 1
+    cursor: pointer
+
+    &:checked~.restaurant__svg .restaurant__svg--empty
+      display: none
+        
+    &:checked~.restaurant__svg .restaurant__svg--full
+      display: block
+    
+  &__svg
+    height: 100%
+    
+  &__svg--full
+    animation: svg__keyframes--full 1s
+    display: none
+
+    #restaurant__svg--gradient
+      rotate: 90deg
+  
+  &__menutitle
+    width: 275px
+    height: 27px
+    font-size: 16px
+    font-weight: 300
+    color: black
+    margin: 0
+
+    &::after
+      content: ""
+      display: block
+      width: 40px
+      height: 3px
+      background-color: var(--tertiary-color)
+      position: absolute
+      top: calc(27px - 3px)
+  
+  &__card
+    height: 69px
+    border-radius: 15.04px
+    background: white
+    box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.10)
+    padding-left: 15px
+    padding-right: 15px
+    display: flex
+    flex-direction: column
+    gap: 5px
+    justify-content: center
+
+    &:active
+      box-shadow: none
+  
+  &__dish
+    font-size: 18px
+    font-weight: 500
+    color: black
+    margin: 0
+  
+  &__dishdetail
+    display: flex
+    justify-content: space-between
+  
+    &--light,
+    &--bold
+      font-size: 15.04px
+      color: black
+      margin: 0
+    
+    &--light
+      font-weight: 300
+
+    &--bold
+      font-weight: 700
+  
+  &__setmenu
+    width: 349px
+    display: flex
+    flex-direction: column
+    gap: 12px
+    position: relative
+  
+  &__button
+    width: 218px
+    height: 50px
+    border: none
+    border-radius: 25px
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color))
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
+    color: white
+    font-size: 16px
+    font-weight: 500
+    transition: filter 0.3s ease
+    margin-bottom: 40px
+
+    &:hover
+      filter: brightness(1.15)
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35)
+    
+@keyframes svg__keyframes--full
+  0%
+    transform: scale(0)
+          
+  25%
+    transform: scale(1.2)
+          
+  50%
+    transform: scale(1)
+    filter: brightness(1.5)
+
+/********** FIN SECTION RESTAURANT **********/
+
+/********** FOOTER **********/
+
+footer
+  height: 186px
+  background-color: #353535
+  padding: 22px 25px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+  .footer
+    &__title
+      font-family: Shrikhand
+      height: 27px
+      font-size: 18px
+      font-weight: 400
+      color: white
+      margin: 0
+    
+    &__proposal
+      gap: 11px
+    
+    &__partner
+      gap: 10.08px
+
+    &__bold
+      font-weight: 500
+
+    &__light
+      font-weight: 400
+
+  ul
+    list-style: none
+    display: grid
+    gap: 7px
+    margin: 0
+    padding: 0
+
+    li
+      height: 19px
+      display: flex
+
+      i, a
+        color: white
+
+      .fa-utensils, .fa-handshake-angle
+        font-size: 13px
+      
+      .fa-utensils
+        width: 11px
+
+      .fa-handshake-angle
+        width: 11.92px
+
+      a
+        font-size: 16px
+
+/********** FIN FOOTER **********/

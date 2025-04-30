@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMF - La palette du goût</title>
     <script src="https://kit.fontawesome.com/0a24995ab9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/common_style.css">
+    <link rel="stylesheet" href="../assets/mobile_menupage_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
@@ -15,112 +15,132 @@
 <body>
     <header>
         <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo du site ohmyfood">
+        <div class="header__maintitle">
+            <h1 class="header__title">ohmyfood</h1>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat servi au resturant">
-            <div>
-                <h1>La palette du goût</h1>
-                <div>
-                    <!--  HEART ANIMATION  -->
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h2>ENTRÉES</h2>
-                <div>
-                    <h3>Fricassée d'escargots</h3>
-                    <div>
-                        <p>Au piment d'Espelette</p>
-                        <p>25€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <div>
-                        <p>Et ses copeaux de truffe noire</p>
-                        <p>35€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Oeuf au plat</h3>
-                    <div>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
-                        <p>20€</p>
+    <main class="restaurant">
+        <img class="restaurant__photo" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat servi au resturant">
+        <section class="restaurant__menu">
+            <div class="restaurant__profile">
+                <h1 class="restaurant__name">La palette du goût</h1>
+                <div class="restaurant__favorite">
+                    <input class="restaurant__checkbox" type="checkbox">
+                    <div class="restaurant__svg">
+                        <svg class="restaurant__svg--empty" viewBox="0 -0.5 32 32">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-100.000000, -880.000000)" fill="#101010">
+                                    <path d="M128,893.682 L116,908 L104,893.623 C102.565,891.629 102,890.282 102,888.438 C102,884.999 104.455,881.904 108,881.875 C110.916,881.851 114.222,884.829 116,887.074 C117.731,884.908 121.084,881.875 124,881.875 C127.451,881.875 130,884.999 130,888.438 C130,890.282 129.553,891.729 128,893.682 L128,893.682 Z M124,880 C120.667,880 118.145,881.956 116,884 C113.957,881.831 111.333,880 108,880 C103.306,880 100,884.036 100,888.438 C100,890.799 100.967,892.499 102.026,894.097 L114.459,909.003 C115.854,910.48 116.118,910.48 117.513,909.003 L129.974,894.097 C131.22,892.499 132,890.799 132,888.438 C132,884.036 128.694,880 124,880 L124,880 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="restaurant__svg--full" viewBox="0 -0.5 32 32">
+                            <defs>
+                                <linearGradient id="restaurant__svg--gradient">
+                                    <stop offset="0%" stop-color="var(--primary-color)" />
+                                    <stop offset="100%" stop-color="var(--secondary-color)" />
+                                </linearGradient>
+                            </defs>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-102.000000, -882.000000)" fill="url(#restaurant__svg--gradient)">
+                                    <path d="M126,882 C122.667,882 119.982,883.842 117.969,886.235 C116.013,883.76 113.333,882 110,882 C105.306,882 102,886.036 102,890.438 C102,892.799 102.967,894.499 104.026,896.097 L116.459,911.003 C117.854,912.312 118.118,912.312 119.513,911.003 L131.974,896.097 C133.22,894.499 134,892.799 134,890.438 C134,886.036 130.694,882 126,882"></path>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
-            <div>
-                <h2>PLATS</h2>
-                <div>
-                    <h3>Filet de boeuf aux herbes</h3>
-                    <div>
-                        <p>Accompagné de sa ribambelle de légumes</p>
-                        <p>40€</p>
+            <div class="restaurant__setmenu">
+                <h2 class="restaurant__menutitle">ENTRÉES</h2>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Fricassée d'escargots</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Au piment d'Espelette</p>
+                        <p class="restaurant__dishdetail--bold">25€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Parmentier de queue de boeuf</h3>
-                    <div>
-                        <p>À la truffe noire sur sa purée de panais</p>
-                        <p>35€</p>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Foie gras de canard mi-cuit</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Et ses copeaux de truffe noire</p>
+                        <p class="restaurant__dishdetail--bold">35€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Filet de turbo</h3>
-                    <div>
-                        <p>Aux agrumes</p>
-                        <p>44€</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h2>DESSERTS</h2>
-                <div>
-                    <h3>Paris-Brest</h3>
-                    <div>
-                        <p>Revisité</p>
-                        <p>18€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Macaron au chocolat d'exception</h3>
-                    <div>
-                        <p>Et glace à la vanille de Madagascar</p>
-                        <p>22€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Mousse au chocolat</h3>
-                    <div>
-                        <p>Au piment d'Espelette et à la truffe noire</p>
-                        <p>23€</p>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Oeuf au plat</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="restaurant__dishdetail--bold">20€</p>
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="#">Commander</a>
+            <div class="restaurant__setmenu">
+                <h2 class="restaurant__menutitle">PLATS</h2>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Filet de boeuf aux herbes</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Accompagné de sa ribambelle de légumes</p>
+                        <p class="restaurant__dishdetail--bold">40€</p>
+                    </div>
+                </div>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Parmentier de queue de boeuf</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">À la truffe noire sur sa purée de panais</p>
+                        <p class="restaurant__dishdetail--bold">35€</p>
+                    </div>
+                </div>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Filet de turbo</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Aux agrumes</p>
+                        <p class="restaurant__dishdetail--bold">44€</p>
+                    </div>
+                </div>
             </div>
+            <div class="restaurant__setmenu">
+                <h2 class="restaurant__menutitle">DESSERTS</h2>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Paris-Brest</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Revisité</p>
+                        <p class="restaurant__dishdetail--bold">18€</p>
+                    </div>
+                </div>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Macaron au chocolat d'exception</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Et glace à la vanille de Madagascar</p>
+                        <p class="restaurant__dishdetail--bold">22€</p>
+                    </div>
+                </div>
+                <div class="restaurant__card">
+                    <h3 class="restaurant__dish">Mousse au chocolat</h3>
+                    <div class="restaurant__dishdetail">
+                        <p class="restaurant__dishdetail--light">Au piment d'Espelette et à la truffe noire</p>
+                        <p class="restaurant__dishdetail--bold">23€</p>
+                    </div>
+                </div>
+            </div>
+            <button class="restaurant__button" type="button">Commander</button>
         </section>
     </main>
 
     <footer>
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo du site ohmyfood">
+        <h4 class="footer__title">ohmyfood</h4>
         <ul>
-            <li>
+            <li class="footer__proposal">
                 <i class="fa-solid fa-utensils"></i>
-                <a href="#">Proposer un restaurant</a>
+                <a class="footer__link footer__bold" href="#">Proposer un restaurant</a>
             </li>
-            <li>
+            <li class="footer__partner">
                 <i class="fa-solid fa-handshake-angle"></i>
-                <a href="#">Devenir partenaire</a>
+                <a class="footer__link footer__bold" href="#">Devenir partenaire</a>
             </li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="footer__link footer__light" href="#">Mentions légales</a></li>
+            <li><a class="footer__link footer__light" href="#">Contact</a></li>
         </ul>
     </footer>
 </body>
+</html>
