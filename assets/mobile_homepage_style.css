@@ -234,7 +234,7 @@ header .header__form {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: absolute;
   margin-top: -161px;
-  left: 265px;
+  margin-left: 248px;
 }
 .restaurants__tag p {
   font-size: 14px;
@@ -304,7 +304,10 @@ header .header__form {
   animation: svg__keyframes--full 1s;
   display: none;
 }
-.restaurants__svg--full #restaurants__svg--gradient {
+.restaurants__svg--full #restaurants__svg--gradient1,
+.restaurants__svg--full #restaurants__svg--gradient2,
+.restaurants__svg--full #restaurants__svg--gradient3,
+.restaurants__svg--full #restaurants__svg--gradient4 {
   rotate: 90deg;
 }
 
