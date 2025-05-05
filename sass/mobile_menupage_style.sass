@@ -127,33 +127,50 @@ header
   
   &__card
     display: flex
-    border-radius: 15.04px
+
+    &--checkbox
+      display: none
 
     &--unselected
       height: 69px
       background: white
-      box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.10)
-      padding-left: 15px
-      padding-right: 15px
+      padding: 0 15px
       display: flex
       flex-direction: column
-      gap: 5px
       justify-content: center
-
+      gap: 5px
+      border-radius: 15.04px
+      box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.10)
+      cursor: pointer
+      width: 100%
+      
+      &:hover
+        box-shadow: none
+    
     &--selected
-      width: 59px
-      background: var(--tertiary-color)
+      display: none
+
+    &--checkbox:checked~.restaurant__card--unselected
+      border-top-left-radius: 15.04px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      border-bottom-left-radius: 15.04px
+      width: calc(100% - 59px - 30px)
+
+    &--checkbox:checked~.restaurant__card--selected
       display: flex
       justify-content: center
       align-items: center
+      width: 59px
+      height: 69px
+      background: var(--tertiary-color)
+      border-top-right-radius: 15.04px
+      border-bottom-right-radius: 15.04px
 
       .fa-circle-check
         font-size: 20px
         color: white
 
-    &:active
-      box-shadow: none
-  
   &__dish
     font-size: 18px
     font-weight: 500
@@ -175,6 +192,14 @@ header
 
     &--bold
       font-weight: 700
+  
+  &__dish,
+  &__dishdetail--light
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    max-width: calc(100% - 47px)
+    min-width: 0
   
   &__button
     width: 218px
@@ -263,5 +288,6 @@ footer
 
       a
         font-size: 16px
+        text-decoration: none
 
 /********** FIN FOOTER **********/

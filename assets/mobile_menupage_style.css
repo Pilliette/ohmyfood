@@ -124,32 +124,49 @@ header .header__title {
 }
 .restaurant__card {
   display: flex;
-  border-radius: 15.04px;
+}
+.restaurant__card--checkbox {
+  display: none;
 }
 .restaurant__card--unselected {
   height: 69px;
   background: white;
-  box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   justify-content: center;
+  gap: 5px;
+  border-radius: 15.04px;
+  box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 100%;
+}
+.restaurant__card--unselected:hover {
+  box-shadow: none;
 }
 .restaurant__card--selected {
-  width: 59px;
-  background: var(--tertiary-color);
+  display: none;
+}
+.restaurant__card--checkbox:checked ~ .restaurant__card--unselected {
+  border-top-left-radius: 15.04px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 15.04px;
+  width: calc(100% - 59px - 30px);
+}
+.restaurant__card--checkbox:checked ~ .restaurant__card--selected {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 59px;
+  height: 69px;
+  background: var(--tertiary-color);
+  border-top-right-radius: 15.04px;
+  border-bottom-right-radius: 15.04px;
 }
-.restaurant__card--selected .fa-circle-check {
+.restaurant__card--checkbox:checked ~ .restaurant__card--selected .fa-circle-check {
   font-size: 20px;
   color: white;
-}
-.restaurant__card:active {
-  box-shadow: none;
 }
 .restaurant__dish {
   font-size: 18px;
@@ -171,6 +188,13 @@ header .header__title {
 }
 .restaurant__dishdetail--bold {
   font-weight: 700;
+}
+.restaurant__dish, .restaurant__dishdetail--light {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 47px);
+  min-width: 0;
 }
 .restaurant__button {
   width: 218px;
@@ -258,6 +282,7 @@ footer ul li .fa-handshake-angle {
 }
 footer ul li a {
   font-size: 16px;
+  text-decoration: none;
 }
 
 /********** FIN FOOTER **********/
