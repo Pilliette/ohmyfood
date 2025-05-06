@@ -196,6 +196,45 @@ header .header__title {
   max-width: calc(100% - 47px);
   min-width: 0;
 }
+.restaurant__card--starters, .restaurant__card--mains, .restaurant__card--desserts {
+  opacity: 0;
+}
+.restaurant__card--starters {
+  animation: card__keyframes--starters 1s ease-out forwards;
+}
+.restaurant__card--starters:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.restaurant__card--starters:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.restaurant__card--starters:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+.restaurant__card--mains {
+  animation: card__keyframes--mains 1s ease-out forwards;
+}
+.restaurant__card--mains:nth-of-type(1) {
+  animation-delay: 1.2s;
+}
+.restaurant__card--mains:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+.restaurant__card--mains:nth-of-type(3) {
+  animation-delay: 2s;
+}
+.restaurant__card--desserts {
+  animation: card__keyframes--desserts 1s ease-out forwards;
+}
+.restaurant__card--desserts:nth-of-type(1) {
+  animation-delay: 2.4s;
+}
+.restaurant__card--desserts:nth-of-type(2) {
+  animation-delay: 2.8s;
+}
+.restaurant__card--desserts:nth-of-type(3) {
+  animation-delay: 3.2s;
+}
 .restaurant__button {
   width: 218px;
   height: 50px;
@@ -224,6 +263,48 @@ header .header__title {
   50% {
     transform: scale(1);
     filter: brightness(1.5);
+  }
+}
+@keyframes card__keyframes--starters {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes card__keyframes--mains {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes card__keyframes--desserts {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 /********** FIN SECTION RESTAURANT **********/

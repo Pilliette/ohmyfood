@@ -44,7 +44,7 @@ header
   &__photo
     height: 275px
     object-fit: cover
-  
+
   &__menu
     border-top-left-radius: 40px
     border-top-right-radius: 40px
@@ -54,7 +54,7 @@ header
     flex-direction: column
     align-items: center
     gap: 40px
-  
+
   &__profile
     display: flex
     justify-content: space-between
@@ -70,7 +70,7 @@ header
     font-weight: 400
     color: #101010
     margin: 0
-  
+
   &__favorite
     position: relative
     width: 22px
@@ -87,27 +87,27 @@ header
 
     &:checked~.restaurant__svg .restaurant__svg--empty
       display: none
-        
+
     &:checked~.restaurant__svg .restaurant__svg--full
       display: block
-    
+
   &__svg
     height: 100%
-    
+
   &__svg--full
     animation: svg__keyframes--full 1s
     display: none
 
     #restaurant__svg--gradient
       rotate: 90deg
-  
+
   &__setmenu
     width: 349px
     display: flex
     flex-direction: column
     gap: 12px
     position: relative
-  
+
   &__menutitle
     width: 275px
     height: 27px
@@ -124,7 +124,7 @@ header
       background-color: var(--tertiary-color)
       position: absolute
       top: calc(27px - 3px)
-  
+
   &__card
     display: flex
 
@@ -143,10 +143,10 @@ header
       box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.10)
       cursor: pointer
       width: 100%
-      
+
       &:hover
         box-shadow: none
-    
+
     &--selected
       display: none
 
@@ -176,23 +176,23 @@ header
     font-weight: 500
     color: black
     margin: 0
-  
+
   &__dishdetail
     display: flex
     justify-content: space-between
-  
+
     &--light,
     &--bold
       font-size: 15.04px
       color: black
       margin: 0
-    
+
     &--light
       font-weight: 300
 
     &--bold
       font-weight: 700
-  
+
   &__dish,
   &__dishdetail--light
     overflow: hidden
@@ -201,6 +201,47 @@ header
     max-width: calc(100% - 47px)
     min-width: 0
   
+  &__card--starters,
+  &__card--mains,
+  &__card--desserts
+    opacity: 0
+  
+  &__card--starters
+    animation: card__keyframes--starters 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 0s
+
+    &:nth-of-type(2)
+      animation-delay: 0.4s
+
+    &:nth-of-type(3)
+      animation-delay: 0.8s
+
+  &__card--mains
+    animation: card__keyframes--mains 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 1.2s
+
+    &:nth-of-type(2)
+      animation-delay: 1.6s
+
+    &:nth-of-type(3)
+      animation-delay: 2s
+
+  &__card--desserts
+    animation: card__keyframes--desserts 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 2.4s
+
+    &:nth-of-type(2)
+      animation-delay: 2.8s
+
+    &:nth-of-type(3)
+      animation-delay: 3.2s
+
   &__button
     width: 218px
     height: 50px
@@ -217,17 +258,56 @@ header
     &:hover
       filter: brightness(1.15)
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35)
-    
+
 @keyframes svg__keyframes--full
   0%
     transform: scale(0)
-          
+
   25%
     transform: scale(1.2)
-          
+
   50%
     transform: scale(1)
     filter: brightness(1.5)
+
+@keyframes card__keyframes--starters
+  0%
+    transform: scale(0)
+    opacity: 0
+
+  50%
+    transform: scale(1.15)
+    opacity: 0.5
+
+  100%
+    transform: scale(1)
+    opacity: 1
+
+@keyframes card__keyframes--mains
+  0%
+    transform: scale(0)
+    opacity: 0
+
+  50%
+    transform: scale(1.15)
+    opacity: 0.5
+
+  100%
+    transform: scale(1)
+    opacity: 1
+
+@keyframes card__keyframes--desserts
+  0%
+    transform: scale(0)
+    opacity: 0
+
+  50%
+    transform: scale(1.15)
+    opacity: 0.5
+
+  100%
+    transform: scale(1)
+    opacity: 1
 
 /********** FIN SECTION RESTAURANT **********/
 
@@ -250,10 +330,10 @@ footer
       font-weight: 400
       color: white
       margin: 0
-    
+
     &__proposal
       gap: 11px
-    
+
     &__partner
       gap: 10.08px
 
@@ -279,7 +359,7 @@ footer
 
       .fa-utensils, .fa-handshake-angle
         font-size: 13px
-      
+
       .fa-utensils
         width: 11px
 
