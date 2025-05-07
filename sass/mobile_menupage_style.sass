@@ -127,6 +127,7 @@ header
 
   &__card
     display: flex
+    position: relative
 
     &--checkbox
       display: none
@@ -143,12 +144,30 @@ header
       box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.10)
       cursor: pointer
       width: 100%
+      transition: width 0.3s linear
 
       &:hover
         box-shadow: none
 
     &--selected
-      display: none
+      position: absolute
+      top: 0
+      right: 0
+      height: 100%
+      width: 0
+      overflow: hidden
+      transition: width 0.3s linear
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 69px
+      background: var(--tertiary-color)
+      border-top-right-radius: 15.04px
+      border-bottom-right-radius: 15.04px
+
+      .fa-circle-check
+        font-size: 20px
+        color: white
 
     &--checkbox:checked~.restaurant__card--unselected
       border-top-left-radius: 15.04px
@@ -158,18 +177,7 @@ header
       width: calc(100% - 59px - 30px)
 
     &--checkbox:checked~.restaurant__card--selected
-      display: flex
-      justify-content: center
-      align-items: center
       width: 59px
-      height: 69px
-      background: var(--tertiary-color)
-      border-top-right-radius: 15.04px
-      border-bottom-right-radius: 15.04px
-
-      .fa-circle-check
-        font-size: 20px
-        color: white
 
   &__dish
     font-size: 18px
@@ -201,6 +209,7 @@ header
     max-width: calc(100% - 47px)
     min-width: 0
   
+  //3 starters + 3 mains + 3 desserts
   &__card--starters,
   &__card--mains,
   &__card--desserts
@@ -241,6 +250,51 @@ header
 
     &:nth-of-type(3)
       animation-delay: 3.2s
+  
+  //4 starters + 3 mains + 3 desserts
+  &__card--longstarters,
+  &__card--longmains,
+  &__card--longdesserts
+    opacity: 0
+
+  &__card--longstarters
+    animation: card__keyframes--starters 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 0s
+
+    &:nth-of-type(2)
+      animation-delay: 0.4s
+
+    &:nth-of-type(3)
+      animation-delay: 0.8s
+
+    &:nth-of-type(4)
+      animation-delay: 1.2s
+
+  &__card--longmains
+    animation: card__keyframes--mains 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 1.6s
+
+    &:nth-of-type(2)
+      animation-delay: 2s
+
+    &:nth-of-type(3)
+      animation-delay: 2.4s
+
+  &__card--longdesserts
+    animation: card__keyframes--desserts 1s ease-out forwards
+
+    &:nth-of-type(1)
+      animation-delay: 2.8s
+
+    &:nth-of-type(2)
+      animation-delay: 3.2s
+
+    &:nth-of-type(3)
+      animation-delay: 3.6s
 
   &__button
     width: 218px

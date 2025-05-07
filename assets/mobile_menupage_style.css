@@ -124,6 +124,7 @@ header .header__title {
 }
 .restaurant__card {
   display: flex;
+  position: relative;
 }
 .restaurant__card--checkbox {
   display: none;
@@ -140,12 +141,30 @@ header .header__title {
   box-shadow: 0 4.01px 15.04px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   width: 100%;
+  transition: width 0.3s linear;
 }
 .restaurant__card--unselected:hover {
   box-shadow: none;
 }
 .restaurant__card--selected {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 69px;
+  background: var(--tertiary-color);
+  border-top-right-radius: 15.04px;
+  border-bottom-right-radius: 15.04px;
+}
+.restaurant__card--selected .fa-circle-check {
+  font-size: 20px;
+  color: white;
 }
 .restaurant__card--checkbox:checked ~ .restaurant__card--unselected {
   border-top-left-radius: 15.04px;
@@ -155,18 +174,7 @@ header .header__title {
   width: calc(100% - 59px - 30px);
 }
 .restaurant__card--checkbox:checked ~ .restaurant__card--selected {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 59px;
-  height: 69px;
-  background: var(--tertiary-color);
-  border-top-right-radius: 15.04px;
-  border-bottom-right-radius: 15.04px;
-}
-.restaurant__card--checkbox:checked ~ .restaurant__card--selected .fa-circle-check {
-  font-size: 20px;
-  color: white;
 }
 .restaurant__dish {
   font-size: 18px;
@@ -234,6 +242,48 @@ header .header__title {
 }
 .restaurant__card--desserts:nth-of-type(3) {
   animation-delay: 3.2s;
+}
+.restaurant__card--longstarters, .restaurant__card--longmains, .restaurant__card--longdesserts {
+  opacity: 0;
+}
+.restaurant__card--longstarters {
+  animation: card__keyframes--starters 1s ease-out forwards;
+}
+.restaurant__card--longstarters:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.restaurant__card--longstarters:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.restaurant__card--longstarters:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+.restaurant__card--longstarters:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+.restaurant__card--longmains {
+  animation: card__keyframes--mains 1s ease-out forwards;
+}
+.restaurant__card--longmains:nth-of-type(1) {
+  animation-delay: 1.6s;
+}
+.restaurant__card--longmains:nth-of-type(2) {
+  animation-delay: 2s;
+}
+.restaurant__card--longmains:nth-of-type(3) {
+  animation-delay: 2.4s;
+}
+.restaurant__card--longdesserts {
+  animation: card__keyframes--desserts 1s ease-out forwards;
+}
+.restaurant__card--longdesserts:nth-of-type(1) {
+  animation-delay: 2.8s;
+}
+.restaurant__card--longdesserts:nth-of-type(2) {
+  animation-delay: 3.2s;
+}
+.restaurant__card--longdesserts:nth-of-type(3) {
+  animation-delay: 3.6s;
 }
 .restaurant__button {
   width: 218px;
