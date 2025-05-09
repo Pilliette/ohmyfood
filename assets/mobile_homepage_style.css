@@ -1,4 +1,18 @@
 /********** GENERAL **********/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-green: #99E2D0;
+  --dark-green: #008766;
+  --light-blue: #89C8FA;
+  --dark-blue: #003A68;
+  --purple: #9356DC;
+  --font-title: "Shrikhand", serif;
+}
+
 .explorer__title,
 .fonctionnement__title,
 .restaurants__title {
@@ -18,6 +32,51 @@
 }
 
 /********** FIN GENERAL **********/
+/********** LOADER **********/
+.loader__container {
+  position: fixed;
+  inset: 0;
+  animation: loader__container--keyframes 2s ease 3s forwards;
+}
+
+.site__content {
+  opacity: 0;
+  animation: site__content--keyframes 1s ease 3s forwards;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green));
+}
+
+.loader__svg {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 1000;
+  animation: loader__svg--keyframes 5s infinite linear forwards;
+}
+
+@keyframes loader__container--keyframes {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes site__content--keyframes {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loader__svg--keyframes {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/********** FIN LOADER **********/
 /********** HEADER **********/
 header i {
   font-size: 16px;
@@ -49,7 +108,7 @@ header .header__maintitle {
   z-index: 1;
 }
 header .header__title {
-  font-family: Shrikhand;
+  font-family: var(--font-title);
   font-size: 30px;
   font-weight: 400;
   color: #101010;
@@ -335,7 +394,7 @@ footer {
   gap: 16px;
 }
 footer .footer__title {
-  font-family: Shrikhand;
+  font-family: var(--font-title);
   height: 27px;
   font-size: 18px;
   font-weight: 400;
