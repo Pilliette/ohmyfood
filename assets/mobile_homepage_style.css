@@ -1,9 +1,4 @@
 /********** GENERAL **********/
-body {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --light-green: #99E2D0;
   --dark-green: #008766;
@@ -33,49 +28,6 @@ body {
 
 /********** FIN GENERAL **********/
 /********** LOADER **********/
-.loader__container {
-  position: fixed;
-  inset: 0;
-  animation: loader__container--keyframes 2s ease 3s forwards;
-}
-
-.site__content {
-  opacity: 0;
-  animation: site__content--keyframes 1s ease 3s forwards;
-}
-
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green));
-}
-
-.loader__svg {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 1000;
-  animation: loader__svg--keyframes 5s infinite linear forwards;
-}
-
-@keyframes loader__container--keyframes {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes site__content--keyframes {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes loader__svg--keyframes {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 /********** FIN LOADER **********/
 /********** HEADER **********/
 header i {
@@ -441,5 +393,61 @@ footer ul li a {
 }
 
 /********** FIN FOOTER **********/
+/********** MEDIA QUERIES **********/
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .header__maintitle {
+    height: 96px;
+    box-shadow: none;
+  }
+  header .header__title {
+    font-size: 34.2px;
+  }
+  header .header__form {
+    box-shadow: none;
+  }
+  .explorer {
+    height: 179px;
+    padding: 30px 0;
+    gap: 18px;
+  }
+  .explorer__title {
+    font-size: 40px;
+    width: 100%;
+    height: 47px;
+    margin: 0;
+  }
+  .explorer__p {
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .explorer__button {
+    margin: 0;
+  }
+  .fonctionnement {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .fonctionnement__title {
+    padding-top: 50px;
+  }
+  .fonctionnement ol {
+    padding-right: 32px;
+  }
+  .fonctionnement li {
+    width: auto;
+  }
+  .fonctionnement__button {
+    width: 100%;
+  }
+  .restaurants__title {
+    padding-top: 30px;
+  }
+}
+/* DESKTOP */
+/********** FIN MEDIA QUERIES **********/
 
 /*# sourceMappingURL=mobile_homepage_style.css.map */
