@@ -27,41 +27,41 @@
 
 /********** LOADER **********/
 
-// .loader__container
-//   position: fixed
-//   inset: 0
-//   animation: loader__container--keyframes 2s ease 3s forwards
+.loader__container
+  position: fixed
+  inset: 0
+  animation: loader__container--keyframes 2s ease 3s forwards
 
-// .site__content
-//   opacity: 0
-//   animation: site__content--keyframes 1s ease 3s forwards
+.site__content
+  opacity: 0
+  animation: site__content--keyframes 1s ease 3s forwards
 
-// .loader
-//   position: absolute
-//   width: 100%
-//   height: 100%
-//   display: flex
-//   justify-content: center
-//   align-items: center
-//   background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green))
+.loader
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green))
 
-// .loader__svg
-//   stroke-dasharray: 500
-//   stroke-dashoffset: 1000
-//   animation: loader__svg--keyframes 5s infinite linear forwards
+.loader__svg
+  stroke-dasharray: 500
+  stroke-dashoffset: 1000
+  animation: loader__svg--keyframes 5s infinite linear forwards
 
-// @keyframes loader__container--keyframes
-//   to
-//     opacity: 0
-//     visibility: hidden
+@keyframes loader__container--keyframes
+  to
+    opacity: 0
+    visibility: hidden
 
-// @keyframes site__content--keyframes
-//   to
-//     opacity: 1
+@keyframes site__content--keyframes
+  to
+    opacity: 1
 
-// @keyframes loader__svg--keyframes
-//   to
-//     stroke-dashoffset: 0
+@keyframes loader__svg--keyframes
+  to
+    stroke-dashoffset: 0
 
 /********** FIN LOADER **********/
 
@@ -262,6 +262,7 @@ header
     display: flex
     flex-direction: column
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10)
+    position: relative
   
   &__link--visited:visited
     .restaurants__tag
@@ -288,7 +289,7 @@ header
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
     position: absolute
     margin-top: calc(-132px - 29px)
-    margin-left: 248px
+    right: 15px
 
     p
       font-size: 14px
@@ -492,8 +493,42 @@ footer
       width: 100%
   
   .restaurants
+    height: auto
+    padding-bottom: 30px
+
     &__title
       padding-top: 30px
+      padding-bottom: 28px
+    
+    &__allcards
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      gap: 50px 50px
+      grid-template-areas: "palette note" "francaise delice"
+      width: calc(100% - 32px - 32px)
+    
+    &__singlecard--palette
+      grid-area: palette
+
+    &__singlecard--note
+      grid-area: note
+
+    &__singlecard--francaise
+      grid-area: francaise
+
+    &__singlecard--delice
+      grid-area: delice
+  
+  footer
+    height: 114px
+    padding: 30px 25px
+    flex-direction: row-reverse
+    align-items: flex-end
+
+    ul
+      display: flex
+      width: 661px
 
 
 /* DESKTOP */

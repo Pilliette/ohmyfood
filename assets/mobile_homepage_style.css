@@ -28,6 +28,49 @@
 
 /********** FIN GENERAL **********/
 /********** LOADER **********/
+.loader__container {
+  position: fixed;
+  inset: 0;
+  animation: loader__container--keyframes 2s ease 3s forwards;
+}
+
+.site__content {
+  opacity: 0;
+  animation: site__content--keyframes 1s ease 3s forwards;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green));
+}
+
+.loader__svg {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 1000;
+  animation: loader__svg--keyframes 5s infinite linear forwards;
+}
+
+@keyframes loader__container--keyframes {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes site__content--keyframes {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loader__svg--keyframes {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /********** FIN LOADER **********/
 /********** HEADER **********/
 header i {
@@ -220,6 +263,7 @@ header .header__form {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .restaurants__link--visited:visited .restaurants__tag {
   display: none;
@@ -245,7 +289,7 @@ header .header__form {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: absolute;
   margin-top: -161px;
-  margin-left: 248px;
+  right: 15px;
 }
 .restaurants__tag p {
   font-size: 14px;
@@ -443,8 +487,43 @@ footer ul li a {
   .fonctionnement__button {
     width: 100%;
   }
+  .restaurants {
+    height: auto;
+    padding-bottom: 30px;
+  }
   .restaurants__title {
     padding-top: 30px;
+    padding-bottom: 28px;
+  }
+  .restaurants__allcards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas: "palette note" "francaise delice";
+    width: calc(100% - 32px - 32px);
+  }
+  .restaurants__singlecard--palette {
+    grid-area: palette;
+  }
+  .restaurants__singlecard--note {
+    grid-area: note;
+  }
+  .restaurants__singlecard--francaise {
+    grid-area: francaise;
+  }
+  .restaurants__singlecard--delice {
+    grid-area: delice;
+  }
+  footer {
+    height: 114px;
+    padding: 30px 25px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  footer ul {
+    display: flex;
+    width: 661px;
   }
 }
 /* DESKTOP */
