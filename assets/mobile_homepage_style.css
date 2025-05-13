@@ -17,7 +17,6 @@
 }
 
 .section__title {
-  padding-left: 20px;
   margin: 0;
 }
 
@@ -28,49 +27,6 @@
 
 /********** FIN GENERAL **********/
 /********** LOADER **********/
-.loader__container {
-  position: fixed;
-  inset: 0;
-  animation: loader__container--keyframes 2s ease 3s forwards;
-}
-
-.site__content {
-  opacity: 0;
-  animation: site__content--keyframes 1s ease 3s forwards;
-}
-
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(0.25turn, var(--purple), var(--dark-blue), var(--light-blue), var(--light-green), var(--dark-green));
-}
-
-.loader__svg {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 1000;
-  animation: loader__svg--keyframes 5s infinite linear forwards;
-}
-
-@keyframes loader__container--keyframes {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes site__content--keyframes {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes loader__svg--keyframes {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 /********** FIN LOADER **********/
 /********** HEADER **********/
 header i {
@@ -168,10 +124,14 @@ header .header__form {
 .fonctionnement {
   height: 440px;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 .fonctionnement__title {
   padding-top: 48px;
   padding-bottom: 26px;
+  align-self: flex-start;
+  padding-left: 20px;
 }
 .fonctionnement ol {
   display: flex;
@@ -235,6 +195,12 @@ header .header__form {
   font-size: 17.91px;
 }
 
+.sub-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /********** FIN SECTION FONCTIONNEMENT **********/
 /********** SECTION RESTAURANTS **********/
 .restaurants {
@@ -247,7 +213,7 @@ header .header__form {
 .restaurants__title {
   padding-top: 54px;
   padding-bottom: 24px;
-  align-self: stretch;
+  align-self: flex-start;
 }
 .restaurants__allcards {
   width: 340px;
@@ -366,6 +332,12 @@ header .header__form {
   rotate: 90deg;
 }
 
+.sub-restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @keyframes svg__keyframes--full {
   0% {
     transform: scale(0);
@@ -439,7 +411,7 @@ footer ul li a {
 /********** FIN FOOTER **********/
 /********** MEDIA QUERIES **********/
 /* TABLET */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   header .header__maintitle {
     height: 96px;
     box-shadow: none;
@@ -527,6 +499,37 @@ footer ul li a {
   }
 }
 /* DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .fonctionnement {
+    height: auto;
+    width: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement__title {
+    padding-top: 0;
+    padding-bottom: 25px;
+    align-self: flex-start;
+  }
+  .fonctionnement ol {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1053px;
+    padding: 0;
+    padding-left: 32px;
+    padding-right: 20px;
+  }
+  .fonctionnement ol li {
+    width: 33.3333333333%;
+  }
+  .sub-fonctionnement {
+    max-width: 1053px;
+    width: 100%;
+  }
+}
 /********** FIN MEDIA QUERIES **********/
 
 /*# sourceMappingURL=mobile_homepage_style.css.map */
