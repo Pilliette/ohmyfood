@@ -443,8 +443,76 @@ footer ul li a {
   .explorer__button {
     margin-top: 0;
   }
+  .fonctionnement {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .fonctionnement li {
+    width: 716px;
+  }
+  .fonctionnement__button {
+    width: 100%;
+  }
+  .restaurants {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .restaurants__title {
+    padding-bottom: 28px;
+  }
+  .restaurants__allcards {
+    width: 733px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+  }
   .restaurants__singlecard {
+    width: 341.5px;
     box-shadow: none;
+  }
+}
+/* BIG TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fonctionnement {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+/* DESKTOP */
+@media (min-width: 1024px) and (max-width: 1441px) {
+  .fonctionnement ol {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .fonctionnement li {
+    width: 300px;
+  }
+  .restaurants__allcards {
+    width: 989px;
+    gap: 50px 100px;
+  }
+  .restaurants__singlecard {
+    width: 444.5px;
+  }
+  footer {
+    flex-direction: row-reverse;
+    height: 114px;
+    padding: 57px 25px 30px 0px;
+  }
+  footer .footer__title {
+    width: 139px;
+  }
+  footer ul {
+    display: flex;
+    width: 661px;
+    height: 20px;
+  }
+  footer li {
+    width: 130px;
+  }
+  footer .footer__proposal,
+  footer .footer__partner {
+    width: 190px;
   }
 }
 /********** NEW FIN MEDIA QUERIES **********/
