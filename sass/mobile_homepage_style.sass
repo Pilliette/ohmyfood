@@ -565,9 +565,66 @@ footer
     .footer__partner
       width: 190px
 
+/* MEDIUM DESKTOP */
+
+@media (min-width: 1025px) and (max-width: 1120px)
+  header
+    .header
+      &__maintitle
+        height: 96px
+        box-shadow: none
+      
+      &__title
+        font-size: 34.2px
+
+      &__form
+        box-shadow: none
+  
+  .explorer
+    padding-top: 30px
+    padding-bottom: 30px
+    gap: 18px
+
+    &__title
+      width: unset
+      height: 47px
+      font-size: 40px
+    
+    &__p
+      width: unset
+      display: flex
+      align-items: center
+    
+    &__button
+      margin-top: 0
+  
+  .fonctionnement
+    padding-top: 50px
+    padding-bottom: 50px
+    padding-left: 0
+    justify-content: center
+
+    &__title
+      padding-bottom: 25px
+    
+    li
+      width: calc((1025px - (2 * 20px) - (3 * 12px) - (2 * 24px)) / 3)
+  
+  .restaurants
+    padding-top: 30px
+    padding-bottom: 30px
+
+    &__allcards
+      width: calc(1025px - (2 * 17.5px))
+      flex-direction: row
+      flex-wrap: wrap
+    
+    &__singlecard
+      box-shadow: none
+
 /* BIG DESKTOP */
 
-@media (min-width: 1025px) and (max-width: 1441px)
+@media (min-width: 1120px) and (max-width: 1441px)
   header
     .header
       &__maintitle

@@ -518,8 +518,63 @@ footer ul li a {
     width: 190px;
   }
 }
+/* MEDIUM DESKTOP */
+@media (min-width: 1025px) and (max-width: 1120px) {
+  header .header__maintitle {
+    height: 96px;
+    box-shadow: none;
+  }
+  header .header__title {
+    font-size: 34.2px;
+  }
+  header .header__form {
+    box-shadow: none;
+  }
+  .explorer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+  .explorer__title {
+    width: unset;
+    height: 47px;
+    font-size: 40px;
+  }
+  .explorer__p {
+    width: unset;
+    display: flex;
+    align-items: center;
+  }
+  .explorer__button {
+    margin-top: 0;
+  }
+  .fonctionnement {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    justify-content: center;
+  }
+  .fonctionnement__title {
+    padding-bottom: 25px;
+  }
+  .fonctionnement li {
+    width: 300.3333333333px;
+  }
+  .restaurants {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .restaurants__allcards {
+    width: 990px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants__singlecard {
+    box-shadow: none;
+  }
+}
 /* BIG DESKTOP */
-@media (min-width: 1025px) and (max-width: 1441px) {
+@media (min-width: 1120px) and (max-width: 1441px) {
   header .header__maintitle {
     height: 96px;
     box-shadow: none;
