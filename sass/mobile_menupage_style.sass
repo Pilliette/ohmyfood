@@ -425,3 +425,93 @@ footer
         text-decoration: none
 
 /********** FIN FOOTER **********/
+
+/********** MEDIA QUERIES **********/
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px)
+  header
+    height: 96.34px
+    font-size: 34.2px
+  
+  .restaurant
+    &__photo
+      height: 383px
+    
+    &__menu
+      margin-top: -40px
+      padding-top: calc(40px + 11px)
+      padding-bottom: 40px
+    
+    &__profile
+      width: 307px
+      height: 41px
+      margin: 0
+    
+    &__name
+      width: 261px
+    
+    &__favorite
+      padding-right: 0
+    
+    &__setmenu
+      width: 634px
+    
+    &__button
+      margin-bottom: 0
+
+/* DESKTOP */
+
+@media (min-width: 1024px) and (max-width: 1441px)
+  header
+    height: 96.34px
+    font-size: 34.2px
+  
+  .restaurant
+    &__photo
+      height: 383px
+    
+    &__menu
+      width: 100%
+      max-width: 1055px
+      margin-inline: auto
+      margin-top: -40px
+      padding-top: calc(40px + 11px)
+      padding-bottom: 40px
+    
+    &__profile
+      width: 307px
+      height: 41px
+      margin: 0
+    
+    &__favorite
+      padding-right: 0
+    
+    &__setmenu
+      width: 634px
+    
+    &__button
+      margin-bottom: 0
+  
+  footer
+    flex-direction: row-reverse
+    height: 114px
+    padding: 57px 25px 30px 0px
+
+    .footer__title
+      width: 139px
+
+    ul
+      display: flex
+      width: 661px
+      height: 20px
+    
+    li
+      width: 130px
+    
+    .footer__proposal,
+    .footer__partner
+      width: 190px
+
+/********** FIN MEDIA QUERIES **********/
