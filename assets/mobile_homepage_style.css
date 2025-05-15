@@ -525,7 +525,7 @@ footer ul li a {
   }
 }
 /* DESKTOP */
-@media (min-width: 1024px) and (max-width: 1441px) {
+@media (min-width: 1024px) {
   .fonctionnement ol {
     flex-direction: row;
     gap: 24px;
@@ -617,7 +617,7 @@ footer ul li a {
   }
 }
 /* BIG DESKTOP */
-@media (min-width: 1120px) and (max-width: 1441px) {
+@media (min-width: 1120px) {
   header .header__maintitle {
     height: 96px;
     box-shadow: none;
